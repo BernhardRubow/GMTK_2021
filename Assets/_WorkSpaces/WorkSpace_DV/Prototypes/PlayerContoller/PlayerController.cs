@@ -1,22 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{
-        public GameObject player1;
+{ 
+    public GameObject player1;
     public GameObject player2;
     public float horizontalInputP1;
     public float verticalInputP1;
     public float horizontalInputP2;
     public float verticalInputP2;
-    public float speedP1;
-    public float speedP2;
+    public float speedP1 = 1f;
+    public float speedP2 = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
