@@ -3,6 +3,10 @@ namespace Nvp.Events
     {
         // scene management Events
         OnSwitchIntroToMainMenu,
+        OnSwitchMainMenuToCredits,
+        OnSwitchMainMenuToIntro,
+        OnSwitchCreditsToMainMenu,
+        OnSwitchMainMenuToGame,
 
 
         // for testing
