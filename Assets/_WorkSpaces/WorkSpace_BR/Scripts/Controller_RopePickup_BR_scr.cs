@@ -45,6 +45,7 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
             {
                 Destroy(hit.collider.gameObject);
                 EventManager.Invoke("ScoreButterflyCollect", this, 200);
+                EventManager.Invoke("OnCollecting", this, null);
             } ;
 
             if (hit.collider.gameObject.layer == 8) // ist Movable
