@@ -43,8 +43,11 @@ public class Seeker_DV : MonoBehaviour
             if (hitColliders.Length > 0)
             {
                 _playerTransform = hitColliders[Random.Range(0, hitColliders.Length)].transform;
-                
             }
+        }
+        else
+        {
+            // if distance > seek distance _playerTransform = null;
         }
     }
 
