@@ -21,15 +21,20 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
         if (Physics.Raycast(_player01.position, _player02.position - _player01.position, out hit, float.MaxValue, _hitLayerMask))
         {
             Debug.Log(hit.collider.gameObject.name);
-            if (hit.collider.gameObject.layer == 7)
+            if (hit.collider.gameObject.layer == 7) // ist Butterfly
             {
                 Destroy(hit.collider.gameObject);
                 EventManager.Invoke("ScoreButterflyCollect", this, 200);
             } ;
 
-            if (hit.collider.gameObject.layer == 8)
+            if (hit.collider.gameObject.layer == 8) // ist Movable
             {
                 hit.collider.gameObject.transform.position = (_player01.position - _player02.position) / 2 + _player02.position;
+            }
+
+            if (hit.collider.gameObject.layer == 11)
+            {
+                Debug.Log("hit laver");
             }
 
         }
