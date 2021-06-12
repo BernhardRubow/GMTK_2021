@@ -20,7 +20,7 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(_player01.position, _player02.position - _player01.position, out hit, float.MaxValue, _hitLayerMask))
         {
-            Debug.Log(hit.collider.gameObject.name);
+            // Debug.Log(hit.collider.gameObject.name);
             if (hit.collider.gameObject.layer == 7) // ist Butterfly
             {
                 Destroy(hit.collider.gameObject);
@@ -34,11 +34,15 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
 
             if (hit.collider.gameObject.layer == 11)
             {
-                Debug.Log("hit laver");
+                // Debug.Log("hit laver");
+                var controller = hit.collider.GetComponent<Controller_Laver_DV_scr>();
+                controller.InvokeEvent();
             }
 
         }
 
         
     }
+
+
 }

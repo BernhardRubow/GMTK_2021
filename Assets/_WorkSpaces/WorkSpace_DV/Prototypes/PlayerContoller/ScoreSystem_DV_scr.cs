@@ -61,7 +61,7 @@ public class ScoreSystem_DV_scr : MonoBehaviour
         int? catchScore = eventArgs as int?;
         if (catchScore != null)
         {
-            Debug.Log(score);
+           // Debug.Log(score);
            score += catchScore.Value; 
         }
         else
