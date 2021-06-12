@@ -48,5 +48,6 @@ public class HeartSystem_DV_scr : MonoBehaviour
         {
             dead = true;
         }
+        
     }
 }
