@@ -18,7 +18,7 @@ public class Controller_ButterflySpawner_BR_scr : MonoBehaviour
             _timer -= _coolDownTime;
             SpawnButterfly();
         }
-        Debug.Log(_timer);
+        //Debug.Log(_timer);
     }
 
     private void SpawnButterfly()

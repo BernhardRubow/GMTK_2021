@@ -37,6 +37,11 @@ public class ScoreSystem_DV_scr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    private void UpdateScoreDisplays()
+    {
         scoreText.text = score.ToString();
         highscoreText.text = score.ToString();
 
@@ -53,7 +58,17 @@ public class ScoreSystem_DV_scr : MonoBehaviour
 
     public void ScoreButterflyCollect(object sender, object eventArgs)
     {
-        score += scoreButterfly;
+        int? catchScore = eventArgs as int?;
+        if (catchScore != null)
+        {
+            Debug.Log(score);
+           score += catchScore.Value; 
+        }
+        else
+        { 
+            score += scoreButterfly;
+        }
+        UpdateScoreDisplays();
     }
 
     public void ScoreWaspCollect(object sender, object eventArgs)

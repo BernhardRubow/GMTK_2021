@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Nvp.Events;
 using UnityEngine;
 
 public class Controller_RopePickup_BR_scr : MonoBehaviour
@@ -20,7 +21,11 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
         if (Physics.Raycast(_player01.position, _player02.position - _player01.position, out hit, float.MaxValue, _hitLayerMask))
         {
             Debug.Log(hit.collider.gameObject.name);
-            if (hit.collider.gameObject.layer == 7) Destroy(hit.collider.gameObject);
+            if (hit.collider.gameObject.layer == 7)
+            {
+                Destroy(hit.collider.gameObject);
+                EventManager.Invoke("ScoreButterflyCollect", this, 200);
+            } ;
 
             if (hit.collider.gameObject.layer == 8)
             {
