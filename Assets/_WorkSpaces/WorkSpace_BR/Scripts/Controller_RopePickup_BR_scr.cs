@@ -29,7 +29,7 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
 
             if (hit.collider.gameObject.layer == 8) // ist Movable
             {
-                hit.collider.gameObject.transform.position = (_player01.position - _player02.position) / 2 + _player02.position;
+                hit.collider.gameObject.transform.position = (_player01.position + _player02.position) / 2;
             }
 
             if (hit.collider.gameObject.layer == 11)
