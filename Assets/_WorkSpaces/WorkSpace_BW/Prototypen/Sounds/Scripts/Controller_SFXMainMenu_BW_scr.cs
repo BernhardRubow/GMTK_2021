@@ -18,16 +18,19 @@ public class Controller_SFXMainMenu_BW_scr : MonoBehaviour
 
     private void OnEnable()
     {
+        // Event start and maker
         EventManager.AddEventListener("OnButtonPress", OnButtonPress);
     }
 
     private void OnDisable()
     {
+        // Disable Events
         EventManager.RemoveEventListener("OnButtonPress", OnButtonPress);
     }
 
     private void OnButtonPress(object sender, object eventArgs)
     {
+        // Play Sounds for Event OnButtonPress
         _audio.clip = _buttonSound[Random.Range(0, _buttonSound.Length)];
         _audio.Play();
     }
@@ -35,7 +38,6 @@ public class Controller_SFXMainMenu_BW_scr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //hier dann if, wenn der Knopf im Menu gedrückt wird
 
     }
 }
