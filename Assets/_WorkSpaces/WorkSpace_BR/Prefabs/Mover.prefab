@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5291974755701848815}
   - component: {fileID: 5291974755701848809}
   - component: {fileID: 5291974755701848808}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &5291974755701848808
 MonoBehaviour:
@@ -127,8 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveVector: {x: 0, y: 0, z: 0}
   _home: {x: 0, y: 0, z: 0}
-  _maxDistance: 15
-  _moveForce: 10
   _rb: {fileID: 0}
-  _wanderFactor: 0.5
-  _stayFactor: 0.2
+  WanderFactor: 0.5
+  StayFactor: 0.2
+  MaxDistance: 30
+  MoveForce: 10

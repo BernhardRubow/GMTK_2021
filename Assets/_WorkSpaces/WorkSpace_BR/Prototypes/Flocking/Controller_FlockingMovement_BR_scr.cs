@@ -7,11 +7,12 @@ public class Controller_FlockingMovement_BR_scr : MonoBehaviour
 {
     [SerializeField] private Vector3 _moveVector;
     [SerializeField] private Vector3 _home;
-    [SerializeField] private float _maxDistance;
-    [SerializeField] private float _moveForce;
     [SerializeField] private Rigidbody _rb;
-    [SerializeField] private float _wanderFactor;
-    [SerializeField] private float _stayFactor;
+
+    public float WanderFactor = 0.5f;
+    public float StayFactor = 0.2f; 
+    public float MaxDistance = 30;
+    public float MoveForce = 10;
 
     public void Start()
     {
@@ -26,7 +27,7 @@ public class Controller_FlockingMovement_BR_scr : MonoBehaviour
         Stay();
 
         _moveVector.y = 0;
-        _rb.AddForce(_moveVector * _moveForce, ForceMode.Force);
+        _rb.AddForce(_moveVector * MoveForce, ForceMode.Force);
     }
 
     private void Stay()
@@ -35,15 +36,15 @@ public class Controller_FlockingMovement_BR_scr : MonoBehaviour
         var distance = distanceVector.magnitude;
         Debug.Log(distance);
 
-        if (distance > _maxDistance)
+        if (distance > MaxDistance)
         {
-            _moveVector -= distanceVector.normalized * _stayFactor;
+            _moveVector -= distanceVector.normalized * StayFactor;
         }
     }
 
     private void Wander()
     {
-        var offset = (Random.insideUnitSphere * _wanderFactor);
+        var offset = (Random.insideUnitSphere * WanderFactor);
 
         _moveVector += offset;
 
