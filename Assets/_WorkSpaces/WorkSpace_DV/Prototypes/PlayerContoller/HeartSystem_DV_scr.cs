@@ -36,6 +36,7 @@ public class HeartSystem_DV_scr : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             EventManager.Invoke("TakeDamage", this, null);
+            EventManager.Invoke("ScoreTakeDamage", this, null);
         }
     }
 
