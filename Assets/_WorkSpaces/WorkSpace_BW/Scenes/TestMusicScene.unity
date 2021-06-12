@@ -566,6 +566,6 @@ PrefabInstance:
         type: 3}
       propertyPath: _buttonSound.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 7360368aba973274789cc420211e60db, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 042e7ed6298ea6d4b996523474ce9bd5, type: 3}
