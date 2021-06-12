@@ -9,6 +9,11 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
     [SerializeField] private AudioClip[] _mainMenuClips;
     [SerializeField] private AudioClip[] _creditsMusicClips;
     [SerializeField] private AudioClip[] _gameMusicClips;
+    [SerializeField] private AudioClip[] _biomGrandpa;
+    [SerializeField] private AudioClip[] _biomWoods;
+    [SerializeField] private AudioClip[] _biomBeach;
+    [SerializeField] private AudioClip[] _biomFlower;
+    [SerializeField] private AudioClip[] _biomTundra;
 
     private AudioSource _audio;
 
@@ -25,10 +30,13 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
         EventManager.AddEventListener("OnMainMenuShown", OnMainMenuShown);
         EventManager.AddEventListener("OnCreditsShown", OnCreditsShown);
         EventManager.AddEventListener("OnGameShown", OnGameShown);
+        EventManager.AddEventListener("OnGrandpa", OnGrandpa);
+        EventManager.AddEventListener("OnWoods", OnWoods);
+        EventManager.AddEventListener("OnBeach", OnBeach);
+        EventManager.AddEventListener("OnFlowers", OnFlowers);
+        EventManager.AddEventListener("OnTundra", OnTundra);
 
     }
-
-    
 
     private void OnDisable()
     {
@@ -37,6 +45,11 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
         EventManager.RemoveEventListener("OnMainMenuShown", OnMainMenuShown);
         EventManager.RemoveEventListener("OnCreditsShown", OnCreditsShown);
         EventManager.RemoveEventListener("OnGameShown", OnGameShown);
+        EventManager.RemoveEventListener("OnGrandpa", OnGrandpa);
+        EventManager.RemoveEventListener("OnWoods", OnWoods);
+        EventManager.RemoveEventListener("OnBeach", OnBeach);
+        EventManager.RemoveEventListener("OnFlowers", OnFlowers);
+        EventManager.RemoveEventListener("OnTundra", OnTundra);
     }
 
     private void OnIntroShown(object sender, object eventArgs)
@@ -64,6 +77,41 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
     {
         // Play Sounds for Event OnGameShown
         _audio.clip = _gameMusicClips[Random.Range(0, _gameMusicClips.Length)];
+        _audio.Play();
+    }
+
+    private void OnGrandpa(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnGrandpa
+        _audio.clip = _biomGrandpa[Random.Range(0, _biomGrandpa.Length)];
+        _audio.Play();
+    }
+
+    private void OnWoods(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnWoods
+        _audio.clip = _biomWoods[Random.Range(0, _biomWoods.Length)];
+        _audio.Play();
+    }
+
+    private void OnBeach(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnBeach
+        _audio.clip = _biomBeach[Random.Range(0, _biomBeach.Length)];
+        _audio.Play();
+    }
+
+    private void OnFlowers(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnFlowers
+        _audio.clip = _biomFlower[Random.Range(0, _biomFlower.Length)];
+        _audio.Play();
+    }
+
+    private void OnTundra(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnTundra
+        _audio.clip = _biomTundra[Random.Range(0, _biomTundra.Length)];
         _audio.Play();
     }
 
