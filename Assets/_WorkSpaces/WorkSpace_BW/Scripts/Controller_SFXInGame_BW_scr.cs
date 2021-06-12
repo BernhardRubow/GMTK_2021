@@ -41,14 +41,14 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
 
     private void OnDamage(object sender, object eventArgs)
     {
-        // Play Sounds for Event OnButtonPress
+        // Play Sounds for Event OnDamage
         _audio.clip = _damageSound[Random.Range(0, _damageSound.Length)];
         _audio.Play();
     }
 
     private void OnBeeShown(object sender, object eventArgs)
     {
-        // Play Sounds for Event OnButtonPress
+        // Play Sounds for Event OnBeeShown
         _audio.clip = _beeSound[Random.Range(0, _beeSound.Length)];
         _audio.Play();
     }
@@ -62,14 +62,14 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
 
     private void OnCollecting(object sender, object eventArgs)
     {
-        // Play Sounds for Event OnButtonPress
+        // Play Sounds for Event OnCollecting
         _audio.clip = _collectorSound[Random.Range(0, _collectorSound.Length)];
         _audio.Play();
     }
 
     private void OnLeaver(object sender, object eventArgs)
     {
-        // Play Sounds for Event OnButtonPress
+        // Play Sounds for Event OnLeaver
         _audio.clip = _leaverSound[Random.Range(0, _leaverSound.Length)];
         _audio.Play();
     }
