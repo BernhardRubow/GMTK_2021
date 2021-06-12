@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator player1Animator;
+    public Animator player2Animator;
+
     public GameObject player1;
     public GameObject player2;
     public float horizontalInputP1;
@@ -21,6 +24,14 @@ public class PlayerController : MonoBehaviour
     {
         rbPlayer1 = player1.GetComponent<Rigidbody>();
         rbPlayer2 = player2.GetComponent<Rigidbody>();
+    } 
+
+    void Update()
+    {
+        player1Animator.SetFloat("X", rbPlayer1.velocity.x);
+        player1Animator.SetFloat("Y", rbPlayer1.velocity.z);
+        player2Animator.SetFloat("X", rbPlayer2.velocity.x);
+        player2Animator.SetFloat("Y", rbPlayer2.velocity.z);
     }
 
     // Update is called once per frame
