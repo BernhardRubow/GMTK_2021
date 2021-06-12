@@ -1367,6 +1367,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2986724492864922535, guid: 1744ebba3c1ba5949b6e58e397e40af2,
+        type: 3}
+      propertyPath: _eventToInvoke
+      value: OnRopeBroken
+      objectReference: {fileID: 0}
     - target: {fileID: 2986724492864922553, guid: 1744ebba3c1ba5949b6e58e397e40af2,
         type: 3}
       propertyPath: m_Name
