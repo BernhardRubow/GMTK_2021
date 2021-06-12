@@ -314,6 +314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mover
       objectReference: {fileID: 0}
+    - target: {fileID: 5291974755701848811, guid: 25cf6cb0473a0954189f46146f45e21f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5291974755701848818, guid: 25cf6cb0473a0954189f46146f45e21f,
         type: 3}
       propertyPath: m_RootOrder
@@ -648,6 +653,7 @@ GameObject:
   - component: {fileID: 1865292059}
   - component: {fileID: 1865292058}
   - component: {fileID: 1865292061}
+  - component: {fileID: 1865292062}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -752,6 +758,21 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1865292062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865292057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf1f12001896924eb65ae11fad3ea8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player01: {fileID: 0}
+  _player02: {fileID: 0}
+  _targetPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1871861604
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,7 +792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1871861605
 Rigidbody:
   m_ObjectHideFlags: 0
