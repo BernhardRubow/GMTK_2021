@@ -54,6 +54,7 @@ public class ScoreSystem_DV_scr : MonoBehaviour
     public void ScoreItemCollect(object sender, object eventArgs)
     {
         score += scoreItem;
+        UpdateScoreDisplays();
     }
 
     public void ScoreButterflyCollect(object sender, object eventArgs)
@@ -74,15 +75,19 @@ public class ScoreSystem_DV_scr : MonoBehaviour
     public void ScoreWaspCollect(object sender, object eventArgs)
     {
         score -= scoreWasp;
+        UpdateScoreDisplays();
     }
 
     public void ScoreTakeDamage(object sender, object eventArgs)
     {
         score -= scoreDamage;
+        UpdateScoreDisplays();
     }
 
     public void ScoreNetDestroy(object sender, object eventArgs)
     {
         score -= scoreNet;
+
+        UpdateScoreDisplays();
     }
 }

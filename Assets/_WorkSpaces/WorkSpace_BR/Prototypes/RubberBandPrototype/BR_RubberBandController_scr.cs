@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Nvp.Events;
 using UnityEngine;
 
 public class BR_RubberBandController_scr : MonoBehaviour
@@ -14,10 +15,10 @@ public class BR_RubberBandController_scr : MonoBehaviour
     {
         var bandLength = _endPoint01.position - _endPoint02.position;
         var bandMagnitude = bandLength.sqrMagnitude;
-        var factor = 256 - (400 / bandMagnitude * 256);
-        _lineColor.r = 256 - factor;
-        _lineColor.b = factor;
-        _lineColor.g = factor;
+        var factor = (bandMagnitude / 400);
+        _lineColor.r = 1;
+        _lineColor.b = 1 - factor;
+        _lineColor.g = 1 - factor;
 
         _lineRenderer.material.SetColor("_Color", _lineColor);
 
@@ -25,11 +26,14 @@ public class BR_RubberBandController_scr : MonoBehaviour
         {
             bandBroken = true;
             _lineRenderer.enabled = false;
+            EventManager.Invoke("OnRopeBroken", this, null);
+            EventManager.Invoke("ScoreNetDestroy", this, null);
         }
         else if (bandMagnitude <= bandMax && bandBroken)
         {
             bandBroken = false;
             _lineRenderer.enabled = true;
+            EventManager.Invoke("OnRopeFixed", this, null);
         }
 
         if (!bandBroken)
