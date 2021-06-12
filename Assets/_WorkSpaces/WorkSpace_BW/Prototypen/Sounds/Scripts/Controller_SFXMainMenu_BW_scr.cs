@@ -38,6 +38,10 @@ public class Controller_SFXMainMenu_BW_scr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // only for testing
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            EventManager.Invoke("OnButtonPress", this, null);
+        }
     }
 }

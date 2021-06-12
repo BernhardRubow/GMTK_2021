@@ -70,10 +70,6 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // only for testing
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            EventManager.Invoke("OnIntroShown", this, null);
-        }
+        
     }
 }
