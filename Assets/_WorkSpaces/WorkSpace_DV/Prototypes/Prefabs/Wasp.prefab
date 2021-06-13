@@ -132,10 +132,10 @@ MonoBehaviour:
   _playerTransform: {fileID: 0}
   WanderFactor: 0.5
   StayFactor: 0.2
-  SeekFactor: 0.8
+  SeekFactor: 1.2
   MaxDistance: 30
   MoveForce: 10
-  SeekDistance: 5
+  SeekDistance: 20
   beeAnimator: {fileID: 3854721064807484303}
   _playerLayerMask:
     serializedVersion: 2
