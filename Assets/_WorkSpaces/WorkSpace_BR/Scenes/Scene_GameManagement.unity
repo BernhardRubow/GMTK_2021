@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417598680}
   - component: {fileID: 417598681}
+  - component: {fileID: 417598682}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -169,6 +170,21 @@ MonoBehaviour:
   _nameOfStartScene: Scene_Intro
   _currentScene: 
   _cam: {fileID: 481693664}
+--- !u!114 &417598682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417598679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441f54666ea826e41bf2c3cb20d9964a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxButterflies: 0
+  _butterfliesCollected: 0
+  _gameTime: 0
 --- !u!1 &481693661
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +243,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481693661}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &481693664
 Camera:
   m_ObjectHideFlags: 0

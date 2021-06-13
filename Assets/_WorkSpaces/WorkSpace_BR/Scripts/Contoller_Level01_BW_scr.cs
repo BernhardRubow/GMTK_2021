@@ -8,6 +8,7 @@ public class Contoller_Level01_BW_scr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        EventManager.Invoke("OnLevel01Loaded", this, null);
         EventManager.Invoke("OnGrandpa", this, null);
     }
 }

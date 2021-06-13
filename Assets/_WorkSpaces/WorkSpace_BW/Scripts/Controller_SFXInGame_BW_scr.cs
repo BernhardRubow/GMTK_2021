@@ -22,9 +22,10 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
     void Start()
     {
         _audio = GetComponent<AudioSource>();
+        
     }
 
-    private void OnEnable()
+    void OnEnable()
     {
         // Event start and maker
         EventManager.AddEventListener("OnDamage", OnDamage);
@@ -38,7 +39,7 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
         EventManager.AddEventListener("OnLeaverFailure", OnLeaverFailure);
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
         // Disable Events
         EventManager.RemoveEventListener("OnDamage", OnDamage);
@@ -74,6 +75,7 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
 
     private void OnCollecting(object sender, object eventArgs)
     {
+        Debug.Log("OnCollecting called");
         // Play Sounds for Event OnCollecting
         _audio.clip = _collectorSound[Random.Range(0, _collectorSound.Length)];
         _audio.Play();
@@ -117,6 +119,10 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    Debug.Log("Space pressed");
+        //    EventManager.Invoke("OnCollecting", this, null);
+        //}
     }
 }
