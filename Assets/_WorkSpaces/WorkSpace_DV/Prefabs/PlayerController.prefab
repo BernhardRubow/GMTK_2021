@@ -112,7 +112,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &411673826457538997
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   _hitLayerMask:
     serializedVersion: 2
     m_Bits: 3968
+  _enabled: 1
 --- !u!1 &985557185740813886
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +201,7 @@ GameObject:
   - component: {fileID: 5479332641899577062}
   - component: {fileID: 3988398351877185805}
   - component: {fileID: 1456548563}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +300,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &78509043
 PrefabInstance:
   m_ObjectHideFlags: 0
