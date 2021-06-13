@@ -184,6 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxButterflies: 0
   _butterfliesCollected: 0
+  _gameTime: 0
 --- !u!1 &481693661
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,8 +437,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -2618749154265681451, guid: f76d1ced4ff449b46bbd7f14fdc17121, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f76d1ced4ff449b46bbd7f14fdc17121, type: 3}
 --- !u!1 &1075225614
 GameObject:
