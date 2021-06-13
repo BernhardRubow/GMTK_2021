@@ -6,14 +6,17 @@ using UnityEngine.UI;
 
 public class ScoreSystem_DV_scr : MonoBehaviour
 {
-    public static int score, highscore;
-    public Text scoreText, highscoreText; 
+    public static int score, highscore, butterfly, time;
+    public Text scoreText, highscoreText, butterflyText, timeText;
     public int scoreItem, scoreButterfly, scoreWasp, scoreDamage, scoreNet;
+    private float timeRemaining = 900;
+    public bool timerIsRunning = false;
+    private int butterflyMax;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        timerIsRunning = true;
     }
 
     private void OnEnable()
@@ -37,18 +40,43 @@ public class ScoreSystem_DV_scr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (timerIsRunning)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
+            }
+            else
+            {
+                EventManager.Invoke("OnEndFail", this, butterfly);
+                timeRemaining = 0;
+                timerIsRunning = false;
+            }
+        }
+    }
+
+    private void DisplayTime(float timeToDisplay)
+    {
+        timeToDisplay += 1;
+
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     private void UpdateScoreDisplays()
     {
-        scoreText.text = score.ToString();
-        highscoreText.text = score.ToString();
-
         if (score > highscore)
         {
             highscore = score;
         }
+
+        scoreText.text = score.ToString();
+        highscoreText.text = highscore.ToString();
+        butterflyText.text = butterfly.ToString() + "/" + butterflyMax.ToString();
+        timeText.text = time.ToString();
     }
 
     public void ScoreItemCollect(object sender, object eventArgs)
@@ -69,6 +97,16 @@ public class ScoreSystem_DV_scr : MonoBehaviour
         { 
             score += scoreButterfly;
         }
+
+        butterfly += 1;
+
+        if (butterfly == butterflyMax)
+        {
+            timerIsRunning = false;
+
+            EventManager.Invoke("OnEndSuccess", this, timeRemaining);
+        }
+
         UpdateScoreDisplays();
     }
 
