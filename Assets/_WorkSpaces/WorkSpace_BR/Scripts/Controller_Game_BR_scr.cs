@@ -8,6 +8,7 @@ public class Controller_Game_BR_scr : MonoBehaviour
 {
     [SerializeField] private int _maxButterflies;
     [SerializeField] private int _butterfliesCollected;
+    [SerializeField] private float _gameTime;
 
     void OnEnable()
     {
@@ -22,5 +23,10 @@ public class Controller_Game_BR_scr : MonoBehaviour
     private void OnCollecting(object sender, object eventargs)
     {
         _butterfliesCollected += 1;
+    }
+
+    void Update()
+    {
+        
     }
 }
