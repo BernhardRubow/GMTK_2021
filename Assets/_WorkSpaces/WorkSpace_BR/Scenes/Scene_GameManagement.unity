@@ -182,7 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441f54666ea826e41bf2c3cb20d9964a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameTime: 0
 --- !u!1 &481693661
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +374,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 310828830229063395, guid: f76d1ced4ff449b46bbd7f14fdc17121,
+        type: 3}
+      propertyPath: _beeSound.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 310828830229063395, guid: f76d1ced4ff449b46bbd7f14fdc17121,
+        type: 3}
+      propertyPath: _beeSound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a6bcae977f68d745b71c238bee5899a, type: 3}
+    - target: {fileID: 310828830229063395, guid: f76d1ced4ff449b46bbd7f14fdc17121,
+        type: 3}
+      propertyPath: _butterflySound.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 310828830229063395, guid: f76d1ced4ff449b46bbd7f14fdc17121,
+        type: 3}
+      propertyPath: _butterflySound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ece4766784e4a44185f56ec8f4fc9a0, type: 3}
     - target: {fileID: 4532145304091808381, guid: f76d1ced4ff449b46bbd7f14fdc17121,
         type: 3}
       propertyPath: m_Name
