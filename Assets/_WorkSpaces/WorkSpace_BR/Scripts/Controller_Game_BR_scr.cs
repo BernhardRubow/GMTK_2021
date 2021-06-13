@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Nvp.Events;
 using UnityEngine;
 
 public class Controller_Game_BR_scr : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int _maxButterflies;
+    [SerializeField] private int _butterfliesCollected;
+
+    void OnEnable()
     {
-        
+        //EventManager.AddEventListener("OnCollecting", OnTest);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnDisable()
     {
-        
+
     }
+
+
 }
