@@ -7,7 +7,8 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
 {
     [SerializeField] private AudioClip[] _introMusicClips;
     [SerializeField] private AudioClip[] _mainMenuClips;
-    [SerializeField] private AudioClip[] _endScreenClips;
+    [SerializeField] private AudioClip[] _endScreenSuccessClips;
+    [SerializeField] private AudioClip[] _endScreenFailureClips;
     [SerializeField] private AudioClip[] _creditsMusicClips;
     [SerializeField] private AudioClip[] _gameMusicClips;
     [SerializeField] private AudioClip[] _biomGrandpa;
@@ -30,7 +31,6 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
         // Event start and maker
         EventManager.AddEventListener("OnIntroShown", OnIntroShown);
         EventManager.AddEventListener("OnMainMenuShown", OnMainMenuShown);
-        EventManager.AddEventListener("OnEndScreenShown", OnEndScreenShown);
         EventManager.AddEventListener("OnCreditsShown", OnCreditsShown);
         EventManager.AddEventListener("OnGameShown", OnGameShown);
         EventManager.AddEventListener("OnGrandpa", OnGrandpa);
@@ -39,6 +39,9 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
         EventManager.AddEventListener("OnFlowers", OnFlowers);
         EventManager.AddEventListener("OnTundra", OnTundra);
         EventManager.AddEventListener("OnBeeAttack", OnBeeAttack);
+        EventManager.AddEventListener("OnEndSuccessLoaded", OnEndSuccessLoaded);
+        EventManager.AddEventListener("OnEndSuccessLoaded", OnEndSuccessLoaded);
+
 
     }
 
@@ -47,7 +50,6 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
         // Disable Events
         EventManager.RemoveEventListener("OnIntroShown", OnIntroShown);
         EventManager.RemoveEventListener("OnMainMenuShown", OnMainMenuShown);
-        EventManager.RemoveEventListener("OnEndScreenShown", OnEndScreenShown);
         EventManager.RemoveEventListener("OnCreditsShown", OnCreditsShown);
         EventManager.RemoveEventListener("OnGameShown", OnGameShown);
         EventManager.RemoveEventListener("OnGrandpa", OnGrandpa);
@@ -56,6 +58,8 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
         EventManager.RemoveEventListener("OnFlowers", OnFlowers);
         EventManager.RemoveEventListener("OnTundra", OnTundra);
         EventManager.RemoveEventListener("OnBeeAttack", OnBeeAttack);
+        EventManager.RemoveEventListener("OnEndFailLoaded", OnEndFailLoaded);
+        EventManager.RemoveEventListener("OnEndFailLoaded", OnEndFailLoaded);
     }
 
     private void OnIntroShown(object sender, object eventArgs)
@@ -69,13 +73,6 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
     {
         // Play Sounds for Event OnMainMenuShown
         _audio.clip = _mainMenuClips[Random.Range(0, _mainMenuClips.Length)];
-        _audio.Play();
-    }
-
-    private void OnEndScreenShown(object sender, object eventArgs)
-    {
-        // Play Sounds for Event OnMainMenuShown
-        _audio.clip = _endScreenClips[Random.Range(0, _endScreenClips.Length)];
         _audio.Play();
     }
 
@@ -132,6 +129,19 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
     {
         // Play Sounds for Event OnBeeAttack
         _audio.clip = _attackMusic[Random.Range(0, _attackMusic.Length)];
+        _audio.Play();
+    }
+    
+    private void OnEndSuccessLoaded(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnEndSuccessLoaded
+        _audio.clip = _endScreenSuccessClips[Random.Range(0, _endScreenSuccessClips.Length)];
+        _audio.Play();
+    }
+    private void OnEndFailLoaded(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnEndSuccessLoaded
+        _audio.clip = _endScreenFailureClips[Random.Range(0, _endScreenFailureClips.Length)];
         _audio.Play();
     }
 
