@@ -389,6 +389,7 @@ MonoBehaviour:
   scoreWasp: 0
   scoreDamage: 100
   scoreNet: 0
+  timerIsRunning: 0
 --- !u!1 &7526280459910518677
 GameObject:
   m_ObjectHideFlags: 0
