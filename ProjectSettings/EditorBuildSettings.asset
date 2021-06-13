@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/_WorkSpaces/WorkSpace_BR/Scenes/Scene_Level_01.unity
     guid: d4bcec9889a818d44a0076307657ff15
   - enabled: 1
-    path: Assets/_WorkSpaces/WorkSpace_BR/Scenes/Scene_End.unity
+    path: Assets/_WorkSpaces/WorkSpace_BR/Scenes/Scene_Success.unity
     guid: a3c50bf9658611e4db4782506f1f88e1
+  - enabled: 1
+    path: Assets/_WorkSpaces/WorkSpace_BR/Scenes/Scene_Fail.unity
+    guid: 733308e96af7ef34f87fd5543c108753
   m_configObjects: {}

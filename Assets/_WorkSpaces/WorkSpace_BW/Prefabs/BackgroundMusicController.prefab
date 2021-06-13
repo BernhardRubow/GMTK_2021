@@ -48,8 +48,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d82db939eed784f42953545e8b5bbb8b, type: 3}
   _mainMenuClips:
   - {fileID: 8300000, guid: 20d66a3006e84bf4080bbcac52afbc03, type: 3}
-  _endScreenClips:
+  _endScreenSuccessClips:
   - {fileID: 8300000, guid: 27a64c265e015d446891f53eaeb7f9bd, type: 3}
+  _endScreenFailureClips:
+  - {fileID: 8300000, guid: c3dca5cb72410ab49b563988d52888bd, type: 3}
   _creditsMusicClips:
   - {fileID: 8300000, guid: 725783601225ab044868762d0445dcb0, type: 3}
   _gameMusicClips: []
