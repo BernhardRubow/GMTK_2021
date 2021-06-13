@@ -14,6 +14,7 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
     [SerializeField] private AudioClip[] _biomBeach;
     [SerializeField] private AudioClip[] _biomFlower;
     [SerializeField] private AudioClip[] _biomTundra;
+    [SerializeField] private AudioClip[] _attackMusic;
 
     private AudioSource _audio;
 
@@ -35,6 +36,7 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
         EventManager.AddEventListener("OnBeach", OnBeach);
         EventManager.AddEventListener("OnFlowers", OnFlowers);
         EventManager.AddEventListener("OnTundra", OnTundra);
+        EventManager.AddEventListener("OnBeeAttack", OnBeeAttack);
 
     }
 
@@ -50,6 +52,7 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
         EventManager.RemoveEventListener("OnBeach", OnBeach);
         EventManager.RemoveEventListener("OnFlowers", OnFlowers);
         EventManager.RemoveEventListener("OnTundra", OnTundra);
+        EventManager.RemoveEventListener("OnBeeAttack", OnBeeAttack);
     }
 
     private void OnIntroShown(object sender, object eventArgs)
@@ -115,13 +118,20 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
         _audio.Play();
     }
 
+    private void OnBeeAttack(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnBeeAttack
+        _audio.clip = _attackMusic[Random.Range(0, _attackMusic.Length)];
+        _audio.Play();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        // only for testing
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            EventManager.Invoke("OnIntroShown", this, null);
-        }
+        //// only for testing
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    EventManager.Invoke("OnIntroShown", this, null);
+        //}
     }
 }

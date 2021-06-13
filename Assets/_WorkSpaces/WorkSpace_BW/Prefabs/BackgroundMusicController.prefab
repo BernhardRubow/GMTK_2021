@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3585013271343099578}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -45,10 +45,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introMusicClips:
-  - {fileID: 8300000, guid: b193b11cba59b4743b727ff421b53dc1, type: 3}
-  _mainMenuClips: []
-  _creditsMusicClips: []
+  - {fileID: 8300000, guid: d82db939eed784f42953545e8b5bbb8b, type: 3}
+  _mainMenuClips:
+  - {fileID: 8300000, guid: 20d66a3006e84bf4080bbcac52afbc03, type: 3}
+  _creditsMusicClips:
+  - {fileID: 8300000, guid: 725783601225ab044868762d0445dcb0, type: 3}
   _gameMusicClips: []
+  _biomGrandpa:
+  - {fileID: 8300000, guid: d7c8fc9e11bf1b540901c77718641fe9, type: 3}
+  _biomWoods:
+  - {fileID: 8300000, guid: 353faf39175ccee4eb12ac1986612b42, type: 3}
+  _biomBeach:
+  - {fileID: 8300000, guid: ea233b23250b696439c432e8b0b15db0, type: 3}
+  _biomFlower: []
+  _biomTundra:
+  - {fileID: 8300000, guid: a67df82eb17cb4e42acb9e57f75d8579, type: 3}
+  _attackMusic:
+  - {fileID: 8300000, guid: b193b11cba59b4743b727ff421b53dc1, type: 3}
 --- !u!82 &3585013271343099583
 AudioSource:
   m_ObjectHideFlags: 0
