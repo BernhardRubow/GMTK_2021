@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7300720723603433882}
   - component: {fileID: 310828830229063395}
-  - component: {fileID: -2618749154265681451}
+  - component: {fileID: 4713859245249815787}
   m_Layer: 0
   m_Name: SFXInGameController
   m_TagString: Untagged
@@ -58,7 +58,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 901aab3851a7b7044b781460d66fe58f, type: 3}
   _leaverSuccess: []
   _leaverFailure: []
---- !u!82 &-2618749154265681451
+--- !u!82 &4713859245249815787
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,7 +69,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
