@@ -30,7 +30,7 @@ public class HeartSystem_DV_scr : MonoBehaviour
     {
         if (dead == true)
         {
-            EventManager.Invoke("GameOver", this, null);
+            EventManager.Invoke("OnEndFail", this, null);
         }
 
         if (Input.GetKeyDown(KeyCode.L))
@@ -48,6 +48,5 @@ public class HeartSystem_DV_scr : MonoBehaviour
         {
             dead = true;
         }
-        
     }
 }

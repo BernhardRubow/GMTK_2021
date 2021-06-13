@@ -12,6 +12,8 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
     private int _pickupLayerMask;
     private int _movableLayerMask;
     public bool _enabled = true;
+    public float damageCooldown = 5;
+    public float damageCooldownLeft;
 
     private void OnEnable()
     {
@@ -35,6 +37,11 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
         enabled = false;
     }
 
+    void start()
+    {
+        damageCooldownLeft = damageCooldown;
+    }
+
     void Update()
     {
         RaycastHit hit;
@@ -47,7 +54,7 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 EventManager.Invoke("ScoreButterflyCollect", this, scoreController.Score);
                 EventManager.Invoke("OnCollecting", this, null);
-            } ;
+            }
 
             if (hit.collider.gameObject.layer == 8) // ist Movable
             {
@@ -61,9 +68,18 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
                 controller.InvokeEvent();
             }
 
+            if (hit.collider.gameObject.layer == 10)
+            {
+                if (damageCooldownLeft < 0)
+                {
+                    EventManager.Invoke("TakeDamage", this, null);
+                    damageCooldownLeft = damageCooldown;
+                }
+            }
+
         }
 
-        
+        damageCooldownLeft -= Time.deltaTime;
     }
 
 
