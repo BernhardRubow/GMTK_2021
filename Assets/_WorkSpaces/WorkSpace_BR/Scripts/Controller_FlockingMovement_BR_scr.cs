@@ -15,6 +15,8 @@ public class Controller_FlockingMovement_BR_scr : MonoBehaviour
     public float MaxDistance = 30;
     public float MoveForce = 10;
 
+    public Animator butterflyAnimator;
+
     public void Start()
     {
         _home = transform.position;
@@ -23,6 +25,9 @@ public class Controller_FlockingMovement_BR_scr : MonoBehaviour
 
     public void Update()
     {
+        butterflyAnimator.SetFloat("X", _moveVector.x);
+        butterflyAnimator.SetFloat("Y", _moveVector.z);
+        
         // nach Player suchen
     }
 
