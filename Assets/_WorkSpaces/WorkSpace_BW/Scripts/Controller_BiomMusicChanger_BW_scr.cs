@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Nvp.Events;
 
-public class Controller_BiomChanger_BW_scr : MonoBehaviour
+public class Controller_BiomMusicChanger_BW_scr : MonoBehaviour
 {
     [SerializeField] private string _biomEvent;
 
