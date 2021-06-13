@@ -11,6 +11,7 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
     [SerializeField] private AudioClip[] _collectorSound;
     [SerializeField] private AudioClip[] _leaverSound;
     [SerializeField] private AudioClip[] _failSound;
+    [SerializeField] private AudioClip[] _walkingSound;
 
     private AudioSource _audio;
 
@@ -29,7 +30,10 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
         EventManager.AddEventListener("OnCollecting", OnCollecting);
         EventManager.AddEventListener("OnLeaver", OnLeaver);
         EventManager.AddEventListener("OnFail", OnFail);
+        EventManager.AddEventListener("OnWalking", OnWalking);
     }
+
+    
 
     private void OnDisable()
     {
@@ -81,6 +85,13 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
     {
         // Play Sounds for Event OnFail
         _audio.clip = _failSound[Random.Range(0, _failSound.Length)];
+        _audio.Play();
+    }
+
+    private void OnWalking(object sender, object eventArgs)
+    {
+        // Play Sounds for Event walking
+        _audio.clip = _walkingSound[Random.Range(0, _walkingSound.Length)];
         _audio.Play();
     }
 

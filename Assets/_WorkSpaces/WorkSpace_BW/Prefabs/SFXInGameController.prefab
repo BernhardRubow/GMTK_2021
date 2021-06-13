@@ -53,6 +53,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fc642b5d89220ca4e89ef7d987fba0d3, type: 3}
   _failSound:
   - {fileID: 8300000, guid: 99c2cb5419304ea44b8bb89853ce0e6b, type: 3}
+  _walkingSound:
+  - {fileID: 8300000, guid: 901aab3851a7b7044b781460d66fe58f, type: 3}
 --- !u!82 &-2618749154265681451
 AudioSource:
   m_ObjectHideFlags: 0
