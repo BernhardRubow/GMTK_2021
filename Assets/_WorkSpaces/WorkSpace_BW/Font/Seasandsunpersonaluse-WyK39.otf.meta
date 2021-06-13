@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3a093cd4f0ce1ce4d8ba11360acd9103
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Sea Sand Sun - Personal Use
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3109758c323da6845b2f881a8a7eb7c4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
