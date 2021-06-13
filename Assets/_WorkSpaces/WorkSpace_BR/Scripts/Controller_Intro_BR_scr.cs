@@ -8,4 +8,9 @@ public class Controller_Intro_BR_scr : MonoBehaviour
     {
         Nvp.Events.EventManager.Invoke(GameEvents.OnSwitchIntroToMainMenu, this, null);
     }
+
+    void Start()
+    {
+        EventManager.Invoke("OnIntroShown", this, null);
+    }
 }

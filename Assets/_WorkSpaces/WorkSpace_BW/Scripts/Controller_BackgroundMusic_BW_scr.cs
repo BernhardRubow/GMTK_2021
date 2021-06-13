@@ -7,6 +7,7 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
 {
     [SerializeField] private AudioClip[] _introMusicClips;
     [SerializeField] private AudioClip[] _mainMenuClips;
+    [SerializeField] private AudioClip[] _endScreenClips;
     [SerializeField] private AudioClip[] _creditsMusicClips;
     [SerializeField] private AudioClip[] _gameMusicClips;
     [SerializeField] private AudioClip[] _biomGrandpa;
@@ -29,6 +30,7 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
         // Event start and maker
         EventManager.AddEventListener("OnIntroShown", OnIntroShown);
         EventManager.AddEventListener("OnMainMenuShown", OnMainMenuShown);
+        EventManager.AddEventListener("OnEndScreenShown", OnEndScreenShown);
         EventManager.AddEventListener("OnCreditsShown", OnCreditsShown);
         EventManager.AddEventListener("OnGameShown", OnGameShown);
         EventManager.AddEventListener("OnGrandpa", OnGrandpa);
@@ -45,6 +47,7 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
         // Disable Events
         EventManager.RemoveEventListener("OnIntroShown", OnIntroShown);
         EventManager.RemoveEventListener("OnMainMenuShown", OnMainMenuShown);
+        EventManager.RemoveEventListener("OnEndScreenShown", OnEndScreenShown);
         EventManager.RemoveEventListener("OnCreditsShown", OnCreditsShown);
         EventManager.RemoveEventListener("OnGameShown", OnGameShown);
         EventManager.RemoveEventListener("OnGrandpa", OnGrandpa);
@@ -66,6 +69,13 @@ public class Controller_BackgroundMusic_BW_scr : MonoBehaviour
     {
         // Play Sounds for Event OnMainMenuShown
         _audio.clip = _mainMenuClips[Random.Range(0, _mainMenuClips.Length)];
+        _audio.Play();
+    }
+
+    private void OnEndScreenShown(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnMainMenuShown
+        _audio.clip = _endScreenClips[Random.Range(0, _endScreenClips.Length)];
         _audio.Play();
     }
 
