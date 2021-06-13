@@ -20,4 +20,8 @@ public class Controller_MainMenu_BR_scr : MonoBehaviour
     {
         EventManager.Invoke(GameEvents.OnSwitchMainMenuToGame, this, null);
     }
+    private void Start()
+    {
+        EventManager.Invoke("OnMainMenuShown", this, null);
+    }
 }

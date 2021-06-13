@@ -12,6 +12,9 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
     [SerializeField] private AudioClip[] _leaverSound;
     [SerializeField] private AudioClip[] _failSound;
     [SerializeField] private AudioClip[] _walkingSound;
+    [SerializeField] private AudioClip[] _leaverSuccess;
+    [SerializeField] private AudioClip[] _leaverFailure;
+
 
     private AudioSource _audio;
 
@@ -31,9 +34,9 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
         EventManager.AddEventListener("OnLeaver", OnLeaver);
         EventManager.AddEventListener("OnFail", OnFail);
         EventManager.AddEventListener("OnWalking", OnWalking);
+        EventManager.AddEventListener("OnLeaverSuccess", OnLeaverSuccess);
+        EventManager.AddEventListener("OnLeaverFailure", OnLeaverFailure);
     }
-
-    
 
     private void OnDisable()
     {
@@ -44,6 +47,8 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
         EventManager.RemoveEventListener("OnCollecting", OnCollecting);
         EventManager.RemoveEventListener("OnLeaver", OnLeaver);
         EventManager.RemoveEventListener("OnFail", OnFail);
+        EventManager.RemoveEventListener("OnLeaverSuccess", OnLeaverSuccess);
+        EventManager.RemoveEventListener("OnLeaverSuccess", OnLeaverSuccess);
     }
 
     private void OnDamage(object sender, object eventArgs)
@@ -92,6 +97,20 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
     {
         // Play Sounds for Event walking
         _audio.clip = _walkingSound[Random.Range(0, _walkingSound.Length)];
+        _audio.Play();
+    }
+
+    private void OnLeaverSuccess(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnLeaverSuccess
+        _audio.clip = _leaverSuccess[Random.Range(0, _leaverSuccess.Length)];
+        _audio.Play();
+    }
+
+    private void OnLeaverFailure(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnLeaverFailure
+        _audio.clip = _leaverFailure[Random.Range(0, _leaverFailure.Length)];
         _audio.Play();
     }
 

@@ -9,4 +9,8 @@ public class Controller_Credits_BR_scr : MonoBehaviour
     {
         EventManager.Invoke(GameEvents.OnSwitchCreditsToMainMenu, this, null);
     }
+    private void Start()
+    {
+        EventManager.Invoke("OnCreditsShown", this, null);
+    }
 }
