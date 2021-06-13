@@ -13,20 +13,40 @@ public class Controller_Game_BR_scr : MonoBehaviour
     void OnEnable()
     {
         EventManager.AddEventListener("OnCollecting", OnCollecting);
+        EventManager.AddEventListener("OnLevel01Loaded", OnLevel01Loaded);
     }
+
+    
 
     void OnDisable()
     {
         EventManager.RemoveEventListener("OnCollecting", OnCollecting);
+        EventManager.RemoveEventListener("OnLevel01Loaded", OnLevel01Loaded);
     }
 
     private void OnCollecting(object sender, object eventargs)
     {
         _butterfliesCollected += 1;
+        if (_butterfliesCollected == _maxButterflies)
+        {
+            EventManager.Invoke("OnGameOver", this, null);
+        }
     }
 
-    void Update()
+    private void OnLevel01Loaded(object sender, object eventargs)
     {
-        
+        _gameTime = 15;
+        StartCoroutine(CountDownTick());
+    }
+
+    private IEnumerator CountDownTick()
+    {
+        while (_gameTime > 1)
+        {
+            yield return new WaitForSeconds(60f);
+            _gameTime--;
+            EventManager.Invoke("OnGameTimeChanged", this, _gameTime);
+        }
+        EventManager.Invoke("OnGameOver", this, null);
     }
 }
