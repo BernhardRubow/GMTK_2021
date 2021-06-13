@@ -43,8 +43,9 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
             // Debug.Log(hit.collider.gameObject.name);
             if (hit.collider.gameObject.layer == 7) // ist Butterfly
             {
+                var scoreController = hit.collider.GetComponent<ScoreButterfly_DV_scr>();
                 Destroy(hit.collider.gameObject);
-                EventManager.Invoke("ScoreButterflyCollect", this, 200);
+                EventManager.Invoke("ScoreButterflyCollect", this, scoreController.Score);
                 EventManager.Invoke("OnCollecting", this, null);
             } ;
 

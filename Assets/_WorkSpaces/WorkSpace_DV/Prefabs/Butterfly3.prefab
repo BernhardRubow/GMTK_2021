@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8719452431030050831}
   - component: {fileID: 8719452431030050825}
   - component: {fileID: 8719452431030050824}
+  - component: {fileID: 2318040442062008570}
   m_Layer: 7
   m_Name: Butterfly3
   m_TagString: Untagged
@@ -135,6 +136,18 @@ MonoBehaviour:
   MaxDistance: 30
   MoveForce: 10
   butterflyAnimator: {fileID: 4052325272431079724}
+--- !u!114 &2318040442062008570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8719452431030050827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12c9a4b3aa096db449c1ec0e1b8d38eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &516766415179076194
 PrefabInstance:
   m_ObjectHideFlags: 0
