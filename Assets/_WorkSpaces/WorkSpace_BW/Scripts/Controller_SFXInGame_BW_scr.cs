@@ -10,6 +10,7 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
     [SerializeField] private AudioClip[] _butterflySound;
     [SerializeField] private AudioClip[] _collectorSound;
     [SerializeField] private AudioClip[] _leaverSound;
+    [SerializeField] private AudioClip[] _failSound;
 
     private AudioSource _audio;
 
@@ -27,6 +28,7 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
         EventManager.AddEventListener("OnButterflyShown", OnButterflyShown);
         EventManager.AddEventListener("OnCollecting", OnCollecting);
         EventManager.AddEventListener("OnLeaver", OnLeaver);
+        EventManager.AddEventListener("OnFail", OnFail);
     }
 
     private void OnDisable()
@@ -37,6 +39,7 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
         EventManager.RemoveEventListener("OnButterflyShown", OnButterflyShown);
         EventManager.RemoveEventListener("OnCollecting", OnCollecting);
         EventManager.RemoveEventListener("OnLeaver", OnLeaver);
+        EventManager.RemoveEventListener("OnFail", OnFail);
     }
 
     private void OnDamage(object sender, object eventArgs)
@@ -71,6 +74,13 @@ public class Controller_SFXInGame_BW_scr : MonoBehaviour
     {
         // Play Sounds for Event OnLeaver
         _audio.clip = _leaverSound[Random.Range(0, _leaverSound.Length)];
+        _audio.Play();
+    }
+
+    private void OnFail(object sender, object eventArgs)
+    {
+        // Play Sounds for Event OnFail
+        _audio.clip = _failSound[Random.Range(0, _failSound.Length)];
         _audio.Play();
     }
 
