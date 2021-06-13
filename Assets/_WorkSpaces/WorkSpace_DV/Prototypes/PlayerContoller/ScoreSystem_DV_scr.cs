@@ -11,7 +11,7 @@ public class ScoreSystem_DV_scr : MonoBehaviour
     public int scoreItem, scoreButterfly, scoreWasp, scoreDamage, scoreNet;
     private float timeRemaining = 900;
     public bool timerIsRunning = false;
-    private int butterflyMax;
+    private int butterflyMax = 42;
     
     // Start is called before the first frame update
     void Start()
