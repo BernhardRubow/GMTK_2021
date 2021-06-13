@@ -22716,6 +22716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1962728302}
   - component: {fileID: 1962728301}
+  - component: {fileID: 1962728303}
   m_Layer: 0
   m_Name: Grandpas_house
   m_TagString: Untagged
@@ -22783,12 +22784,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962728300}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.58, y: 0, z: 8}
+  m_LocalPosition: {x: -1.58, y: 0, z: 9.95}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &1962728303
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962728300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 26.95779, y: 21.990002, z: 0.20000005}
+  m_Center: {x: 0.6361035, y: 0, z: 0}
 --- !u!1001 &1971831477
 PrefabInstance:
   m_ObjectHideFlags: 0
