@@ -23,6 +23,7 @@ public class Seeker_DV : MonoBehaviour
     public float MaxDistance = 30;
     public float MoveForce = 10;
     public float SeekDistance = 5;
+    public Animator beeAnimator;
 
     public LayerMask _playerLayerMask;
 
@@ -30,12 +31,12 @@ public class Seeker_DV : MonoBehaviour
     {
         _home = transform.position;
         _rb = GetComponent<Rigidbody>();
-
-        
     }
 
     public void Update()
     {
+        beeAnimator.SetFloat("X", _moveVector.x);
+        
         if (_playerTransform == null)
         {
             // nach Player suchen
