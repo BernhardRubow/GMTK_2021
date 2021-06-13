@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6686dff408c7fcd44905a288616ae1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageSound: []
+  _damageSound:
+  - {fileID: 8300000, guid: 0df513a05fe38334e89e95d97f859dc3, type: 3}
   _beeSound: []
   _butterflySound: []
   _collectorSound:
@@ -55,6 +56,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 99c2cb5419304ea44b8bb89853ce0e6b, type: 3}
   _walkingSound:
   - {fileID: 8300000, guid: 901aab3851a7b7044b781460d66fe58f, type: 3}
+  _leaverSuccess: []
+  _leaverFailure: []
 --- !u!82 &-2618749154265681451
 AudioSource:
   m_ObjectHideFlags: 0

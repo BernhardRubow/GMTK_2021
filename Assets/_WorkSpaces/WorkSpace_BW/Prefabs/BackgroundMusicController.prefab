@@ -59,7 +59,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 353faf39175ccee4eb12ac1986612b42, type: 3}
   _biomBeach:
   - {fileID: 8300000, guid: ea233b23250b696439c432e8b0b15db0, type: 3}
-  _biomFlower: []
+  _biomFlower:
+  - {fileID: 8300000, guid: eabfc2f47b5c43743b4adb74f59a6c17, type: 3}
   _biomTundra:
   - {fileID: 8300000, guid: a67df82eb17cb4e42acb9e57f75d8579, type: 3}
   _attackMusic:
