@@ -47,7 +47,7 @@ public class Controller_RopePickup_BR_scr : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(_player01.position, _player02.position - _player01.position, out hit, (_player02.position - _player01.position).magnitude, _hitLayerMask) && _enabled == true)
         {
-            Debug.Log(hit.collider.gameObject.name);
+            //Debug.Log(hit.collider.gameObject.name);
             if (hit.collider.gameObject.layer == 7) // ist Butterfly
             {
                 var scoreController = hit.collider.GetComponent<ScoreButterfly_DV_scr>();

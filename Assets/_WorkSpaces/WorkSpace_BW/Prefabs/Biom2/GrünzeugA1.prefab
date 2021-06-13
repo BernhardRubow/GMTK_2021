@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7585873599023658365}
   - component: {fileID: 9161681939201513221}
-  - component: {fileID: 96083111470591006}
   m_Layer: 0
   m_Name: "Gr\xFCnzeugA1"
   m_TagString: Untagged
@@ -83,16 +82,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &96083111470591006
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385421521213985397}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0451298, y: 1.7051109, z: 0.20000005}
-  m_Center: {x: -0.14957833, y: -0.14765227, z: -3.2190852e-16}
