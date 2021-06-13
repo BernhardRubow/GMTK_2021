@@ -28,6 +28,8 @@ public class Controller_Scene_BR_scr : MonoBehaviour
         EventManager.AddEventListener(GameEvents.OnSwitchMainMenuToCredits, OnSwitchMainMenuToCredits);
         EventManager.AddEventListener(GameEvents.OnSwitchCreditsToMainMenu, OnSwitchCreditsToMainMenu);
         EventManager.AddEventListener(GameEvents.OnSwitchMainMenuToGame, OnSwitchMainMenuToGame);
+        EventManager.AddEventListener("OnEndSuccess", OnSwitchGameToEndSuccess);
+        EventManager.AddEventListener("OnEndFail", OnSwitchGameToEndFail);
     }
 
     void OnDisable()
@@ -37,7 +39,11 @@ public class Controller_Scene_BR_scr : MonoBehaviour
         EventManager.RemoveEventListener(GameEvents.OnSwitchMainMenuToCredits, OnSwitchMainMenuToCredits);
         EventManager.RemoveEventListener(GameEvents.OnSwitchCreditsToMainMenu, OnSwitchCreditsToMainMenu);
         EventManager.RemoveEventListener(GameEvents.OnSwitchMainMenuToGame, OnSwitchMainMenuToGame);
+        EventManager.AddEventListener("OnEndSuccess", OnSwitchGameToEndSuccess);
+        EventManager.AddEventListener("OnEndFail", OnSwitchGameToEndFail);
     }
+
+    
 
 
     // +++ event handler ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -64,6 +70,16 @@ public class Controller_Scene_BR_scr : MonoBehaviour
     private void OnSwitchCreditsToMainMenu(object sender, object eventargs)
     {
         StartCoroutine(LoadScene("Scene_MainMenu"));
+    }
+
+    private void OnSwitchGameToEndFail(object sender, object eventargs)
+    {
+        StartCoroutine(LoadScene("Scene_EndFail"));
+    }
+
+    private void OnSwitchGameToEndSuccess(object sender, object eventargs)
+    {
+        StartCoroutine(LoadScene("Scene_EndSuccess"));
     }
 
 
