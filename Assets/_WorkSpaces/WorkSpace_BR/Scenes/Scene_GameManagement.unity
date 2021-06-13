@@ -182,8 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441f54666ea826e41bf2c3cb20d9964a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxButterflies: 0
-  _butterfliesCollected: 0
   _gameTime: 0
 --- !u!1 &481693661
 GameObject:
@@ -536,6 +534,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3585013271343099581, guid: 4c921461611138844aae35f1fa18d014,
+        type: 3}
+      propertyPath: _endScreenFailureClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3585013271343099581, guid: 4c921461611138844aae35f1fa18d014,
+        type: 3}
+      propertyPath: _endScreenSuccessClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3585013271343099581, guid: 4c921461611138844aae35f1fa18d014,
+        type: 3}
+      propertyPath: _endScreenFailureClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c3dca5cb72410ab49b563988d52888bd, type: 3}
+    - target: {fileID: 3585013271343099581, guid: 4c921461611138844aae35f1fa18d014,
+        type: 3}
+      propertyPath: _endScreenSuccessClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 27a64c265e015d446891f53eaeb7f9bd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c921461611138844aae35f1fa18d014, type: 3}
 --- !u!1 &1655448049
